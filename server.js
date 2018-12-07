@@ -1,7 +1,8 @@
+// app
 const express = require('express');
 const app = express();
 const md5 = require('md5');
-//
+// multer
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -12,7 +13,7 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({ storage: storage }).single('file');
-//
+// mongo
 const MongoClient = require('mongodb').MongoClient;
 const user = encodeURIComponent('user2');
 const password = encodeURIComponent('userpass');
